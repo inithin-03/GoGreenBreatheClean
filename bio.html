@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <!-- Basic Page Needs
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta charset="utf-8">
+  <title>Alex Kafer's Plant Sale</title>
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <!-- Mobile Specific Metas
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+<link href="css/style.css" rel="stylesheet">
+
+</head>
+<body>
+
+	<div class="jumbotron">
+		<div class="container">
+
+			<h1>Support <a herf="http://www.crimsonrobotics.com">Crimson Robotics</a></h1>
+			<p>We won our way to worlds, now we reach out to our community to help us fund the trip</p>
+
+			<p>Simply choose which flowers you want, write the check, and fill in your information. I will stop by to confirm your order and pick up the check. </p>
+
+			<p>Plants will be delivered on or shortly after Thursday, May 12th!</p>
+
+  </div>
+</div>
+
+<noscript>
+ <div class="container alert alert-danger">For full functionality of this site it is necessary to enable JavaScript.
+ Here are the <a href="http://www.enable-javascript.com/" target="_blank">
+ instructions how to enable JavaScript in your web browser</a>.</div>
+</noscript>
+
+<!-- Progress Steps -->
+<div class="container">
+            <div class="row progress-steps" style="border-bottom:0;">
+
+                <div id="step1" class="col-xs-3 progress-steps-step active">
+                  <div class="text-center progress-steps-stepnum">Step 1</div>
+                  <div class="progress"><div class="progress-bar"></div></div>
+                  <a href="#" class="progress-steps-dot"></a>
+                  <div class="text-center progress-steps-stepnum">Pick out your plants</div>
+                </div>
+
+                <div id="step2" class="col-xs-3 progress-steps-step disabled"><!-- complete -->
+                  <div class="text-center progress-steps-stepnum">Step 2</div>
+                  <div class="progress"><div class="progress-bar"></div></div>
+                  <a href="#" class="progress-steps-dot"></a>
+                  <div class="text-center progress-steps-stepnum">Double check your order</div>
+                </div>
+
+                <div id="step3" class="col-xs-3 progress-steps-step disabled"><!-- complete -->
+                  <div class="text-center progress-steps-stepnum">Step 3</div>
+                  <div class="progress"><div class="progress-bar"></div></div>
+                  <a href="#" class="progress-steps-dot"></a>
+                  <div class="text-center progress-steps-stepnum">Fill out your contact information and payment method</div>
+                  </div>
+
+                <div id="step4" class="col-xs-3 progress-steps-step disabled"><!-- active -->
+                  <div class="text-center progress-steps-stepnum">Step 4</div>
+                  <div class="progress"><div class="progress-bar"></div></div>
+                  <a href="#" class="progress-steps-dot"></a>
+                  <div class="text-center progress-steps-stepnum">Wait until May 12th and plant!</div>
+                 </div>
+
+
+            </div>
+
+	</div>
+</div>
+<!-- End Progress Steps -->
+
+<div class="container alert alert-success" id="confirmation" role="alert" style="display:none">
+  <h4>Thank you for your support! Your order has been received.</h4>
+  <p>I will be contacting you soon to confirm your order</p>
+</div>
+
+<div class="container" id = "contact" style="display:none; margin-bottom: 20%">
+
+
+<form class="form-horizontal" id="order-form" role="form">
+
+
+<!-- Form Name -->
+<legend>Enter your Contact Information</legend>
+
+<!-- Text input-->
+<div class="well">
+  <div class="alert alert-danger">Do not forget to fill in your contact information below!</div>
+  <br />
+<div class="form-group">
+  <label class="col-md-4 control-label" for="Name">Name</label>
+  <div class="col-md-4">
+  <input id="Name" name="Name" type="text" required class="form-control input-md">
+  <div class="help-block with-errors"></div>
+  </div>
+</div>
+
+<div class="form-group">
+  <label class="col-md-4 control-label" for="Email">Email</label>
+  <div class="col-md-4">
+  <input id="Email" name="Email" type="email" required class="form-control input-md">
+  <div class="help-block with-errors"></div>
+  </div>
+</div>
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="Address">Delivery Address</label>
+  <div class="col-md-4">
+  <input id="Address" name="Address" type="text" class="form-control input-md" required>
+  <div class="help-block with-errors"></div>
+  </div>
+</div>
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="Phone Number">Phone Number</label>
+  <div class="col-md-4">
+  <input id="Phone Number" name="Phone Number" type="text" class="form-control input-md" required>
+  <div class="help-block with-errors"></div>
+  </div>
+</div>
+</div>
+
+<legend>And Choose Payment Method</legend>
+
+
+  <div class="text-center">
+    <div class="btn-group" data-toggle="buttons">
+      <label class="btn btn-default">
+        <input type="radio" name="payment" value="check" autocomplete="off"> <strong>Pay with a check (or cash)</strong><br /><small>No Fee!</small>
+      </label>
+      <label class="btn btn-default">
+        <input type="radio" name="payment" value="paypal" autocomplete="off"> <strong>Pay with Paypal</strong> <br /><small>2.9% + $0.30 fee applies</small>
+      </label>
+    </div>
+  </div>
+
+  <hr />
+
+  <div class="text-center" id="payment-check" style="display:none">
+    <h3>I will contact you shortly to confirm your order and pick up the money. </h3> <p> Checks should be made out to <strong>Maple Grove Robotics Booster Club</strong>.</p>
+    <h5>When you are ready, please submit the order. <h6>
+
+    <br />
+    <button class="btn btn-primary btn-lg" type="submit">Submit order</button>
+    <br />
+
+    <h2>Thank you for supporting Crimson Robotics!</h2>
+  </div>
+
+  <div class="text-center" id="payment-paypal" style="display:none">
+    <h3>Pay with PayPal</h3>
+    <br />
+      <div class="form-group">
+        <button type="submit" class="btn btn-primary" onclick="payWithPayPal()">Pay with Paypal</button>
+      </div>
+    <br />
+    <p>If there is an error with PayPal, you may use this button to manually place the order. <br />Even though payment was never made, the order will still be logged on my side and we'll figure out payment.</p>
+
+        <br />
+        <div class="form-group">
+            <button class="btn btn-default btn-lg" type="submit">Submit order</button>
+        </div>
+        <br />
+
+        <h2>Thank you for supporting Crimson Robotics!</h2>
+  </div>
+
+
+</form>
+
+</div>
+
+<div class="container" id="plant-cart" style="display:none">
+
+	<div class="page-header">
+	  	<h1>Your plants <button class="btn btn-success pull-right" type="button" onclick="showPlants()">Go back and see all plants</button></h1>
+	</div>
+
+</div>
+  <!-- Primary Page Layout
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+<div class="container" id="plants">
+
+	<div class="page-header">
+	  	<h1>Hanging Baskets <small>Sun</small></h1>
+	</div>
+  <div id="hanging-sun"></div>   <!-- Javascript adds the plants here -->
+
+  <div class="page-header">
+	  	<h1>Hanging Baskets <small>Sun/Part Shade</small></h1>
+	</div>
+  <div id="hanging-part"></div>   <!-- Javascript adds the plants here -->
+
+
+
+  <div class="page-header">
+	  	<h1>Hanging Baskets <small>Shade</small></h1>
+	</div>
+
+  <div id="hanging-shade"></div>
+
+
+  <div class="page-header">
+	  	<h1>Patio Tubs and Containers <small>Sun</small></h1>
+	</div>
+  <div id="patio-sun"></div>
+
+  <div class="page-header">
+	  	<h1>Patio Tubs and Containers <small>Shade / Part Sun</small></h1>
+	</div>
+  <div id="patio-part"></div>
+
+  <div class="page-header">
+	  	<h1>4.75" Pots <small>Premium Potted Annuals</small></h1>
+	</div>
+  <div id="475-potted-annuals"></div>
+
+  <div class="page-header">
+	  	<h1>4.75" Pots <small> Annual Vines and Fillers</small></h1>
+	</div>
+  <div id="475-potted-vines-fillers"></div>
+
+  <div class="page-header">
+	  	<h1>4.75" Pots <small> Grasses</small></h1>
+	</div>
+  <div id="475-potted-grasses"></div>
+
+  <div class="page-header">
+	  	<h1>4.75" Sun Coleus <small> New for 2016!</small></h1>
+	</div>
+  <div id="475-sun-coleus"></div>
+
+  <div class="page-header">
+	  	<h1>Annual Flats <small>Sun</small></h1>
+      <p>Flat contains 6 packs with 6 plants in each pack, total of 36 plants</p>
+	</div>
+  <div id="annual-flats-sun"></div>
+
+  <div class="page-header">
+	  	<h1>Annual Flats <small>Part Sun/Shade</small></h1>
+      <p>Flat contains 6 packs with 6 plants in each pack, total of 36 plants</p>
+	</div>
+  <div id="annual-flats-part"></div>
+
+  <div class="page-header">
+	  	<h1>Novelty Items <small>New for 2016!</small></h1>
+	</div>
+  <div id="novelty-items"></div>   <!-- Javascript adds the plants here -->
+
+  <h1>Vegetables, Herbs, and Small Fruits</h1>
+
+  <div class="page-header">
+	  	<h1>10" Patio Pot Tomato w/ Support Cage</h1>
+	</div>
+  <div id="tomato-w-cage"></div>
+
+  <div class="page-header">
+	  	<h1>4.75" Pot Vegetables <small>Sun</small></h1>
+	</div>
+  <div id="475-veg"></div>
+
+  <div class="page-header">
+	  	<h1>4" Pot Herbs <small>Sun</small></h1>
+	</div>
+  <div id="4-herbs"></div>
+
+  <div class="page-header">
+	  	<h1>Strawberrys <small>Sun</small></h1>
+	</div>
+  <div id="strawberry"></div>
+
+  <div class="page-header">
+	  	<h1>Perennials #1 Container</h1>
+	</div>
+  <div id="perennials"></div>
+
+  <div class="page-header">
+	  	<h1>Perennials #1 Container <small>Grasses</small></h1>
+	</div>
+  <div id="perennial-grass"></div>
+
+</div>
+
+
+  <footer class="footer">
+      <div class="container">
+        <p class="text-muted"><h4 class="text-center">Total:  <span  id="totalPrice" style="font-size:36px">$0</span><button class="btn btn-primary pull-right" id="nextBtn" onclick="showCart()">Continue</button></h4></p>
+
+      </div>
+  </footer>
+
+<!-- End Document
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+
+  <script
+  			  src="https://code.jquery.com/jquery-2.2.2.js"
+  			  integrity="sha256-4/zUCqiq0kqxhZIyp4G0Gk+AOtCJsY1TA00k5ClsZYE="
+  			  crossorigin="anonymous"></script>
+
+<script src="http://1000hz.github.io/bootstrap-validator/dist/validator.min.js"></script>
+
+<script src="js/plants.js"></script>
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Float four columns side by side */
+.column {
+  float: left;
+  width: 25%;
+  padding: 0 10px;
+}
+
+/* Remove extra left and right margins, due to padding */
+.row {margin: 0 -5px;}
+.row {
+    display: flex;
+    justify-content: space-between;
+flex-direction: row;
+flex-wrap: wrap;
+  }
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive columns */
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+  }
+}
+
+/* Style the counter cards */
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  padding: 16px;
+  text-align: center;
+  background-color: #f1f1f1;
+}
+</style>
+</head>
+<body style="background-color:bisque">
+
+<h2>Responsive Column Cards</h2>
+<p>Resize the browser window to see the effect.</p>
+
+<center><div class="row">
+  <div class="column">
+    <div class="card">
+        <img class="card-img-bottom" src="img4.jpg" alt="Card image" style="width:100%">
+      <h3>Breif About Hibiscus</h3>
+      <p>Hibiscus is a genus of flowering plants in the mallow family, Malvaceae. It is quite large, containing several hundred species that are native to warm-temperate, subtropical, and tropical regions throughout the world. </p>
+      <a href="Hibiscus.html" ><input type="button" value="Login"></a>
+    </div>
+  </div>
+
+  <div class="column">
+    <div class="card">
+        <img class="card-img-bottom" src="img3.jpg" alt="Card image" style="width:100%">
+      <h3>Breif About Banyan</h3>
+      <p>banyan, (Ficus benghalensis), also called Indian banyan or banyan fig, unusually shaped tree of the mulberry family (Moraceae) native to the Indian subcontinent. The banyan reaches a height up to 30 metres (100 feet) and spreads laterally indefinitely</p>
+      <a href="Banyan.html" ><input type="button" value="Login"></a>
+    </div>
+  </div>
+  
+ 
+</div>
+
+<br>
+
+
+
+</body>
+</html>
